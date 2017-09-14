@@ -6,4 +6,9 @@ class Machine < ApplicationRecord
   def average_price
   	"$" + sprintf('%.2f', snacks.average(:price))
   end
+
+  def inventory
+  	snacks.count
+  end
+
 end
